@@ -1,0 +1,46 @@
+/* Styles pour la photo de profil */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.05);
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: left;
+  flex: 1;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+}

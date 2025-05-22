@@ -38,13 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Exécuter une fois au chargement
     
-    // Formulaire de contact (placeholder)
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Cette fonctionnalité de formulaire est un placeholder. Dans une implémentation réelle, les données seraient envoyées à un serveur.');
-        });
-    }
+    // Formulaire de contact avec Formspree
+    // Le formulaire est maintenant géré par Formspree, donc nous n'avons plus besoin
+    // d'empêcher la soumission par défaut
 });

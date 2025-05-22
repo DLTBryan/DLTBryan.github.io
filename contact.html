@@ -111,7 +111,7 @@
                 <div>
                     <h2 class="section-title">Formulaire de Contact</h2>
                     <div class="card">
-                        <form class="contact-form">
+                        <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
                             <div class="form-group">
                                 <label for="name">Nom</label>
                                 <input type="text" id="name" name="name" placeholder="Votre nom" required>
@@ -128,6 +128,7 @@
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" placeholder="Votre message" required></textarea>
                             </div>
+                            <input type="hidden" name="_next" value="https://votre-nom-utilisateur.github.io/thank-you.html">
                             <button type="submit">Envoyer</button>
                         </form>
                     </div>
