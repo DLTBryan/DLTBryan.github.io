@@ -1,0 +1,34 @@
+/* css/enhanced-style.css */
+:root {
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  
+  /* Fluid typography */
+  --min-font: 1rem;
+  --max-font: 1.2rem;
+  --fluid-font: clamp(var(--min-font), 0.5rem + 1vw, var(--max-font));
+}
+
+/* Mobile-first media queries */
+@media (min-width: 768px) {
+  :root {
+    --min-font: 1.2rem;
+    --max-font: 1.5rem;
+  }
+}
+
+/* Touch-friendly interactive elements */
+.button, .nav-link {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 1em 1.5em;
+  touch-action: manipulation;
+}
+
+/* Enhanced grid system */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 2rem;
+}

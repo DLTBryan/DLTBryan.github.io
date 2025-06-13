@@ -1,0 +1,23 @@
+/* css/components.css */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  transform: translateX(-100%);
+}
