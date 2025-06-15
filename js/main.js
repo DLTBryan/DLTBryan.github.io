@@ -42,3 +42,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Le formulaire est maintenant géré par Formspree, donc nous n'avons plus besoin
     // d'empêcher la soumission par défaut
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  const swiper = new Swiper('.articlesSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640:  { slidesPerView: 1, spaceBetween: 20 },
+      1024: { slidesPerView: 2, spaceBetween: 24 },
+      1280: { slidesPerView: 3, spaceBetween: 32 },
+    },
+  });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  new Swiper('.conferencesSwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.conferences-carousel .swiper-button-next',
+      prevEl: '.conferences-carousel .swiper-button-prev',
+    },
+    pagination: {
+      el: '.conferences-carousel .swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640:  { slidesPerView: 1, spaceBetween: 20 },
+      1024: { slidesPerView: 2, spaceBetween: 24 },
+      1280: { slidesPerView: 3, spaceBetween: 32 },
+    },
+  });
+});

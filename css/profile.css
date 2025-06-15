@@ -6,6 +6,27 @@
   flex-wrap: wrap;
   gap: 30px;
   margin-bottom: 20px;
+  /*Blur background , black and transparent*/
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* Fallback for browsers that do not support backdrop-filter */
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  /* Modern browsers */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+  /* Fallback for older browsers */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .profile-picture {
@@ -19,7 +40,7 @@
 }
 
 .profile-picture:hover {
-  transform: scale(1.05);
+  transform: scale(1.20);
 }
 
 .profile-picture img {
