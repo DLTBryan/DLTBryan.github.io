@@ -476,7 +476,7 @@ footer {
   }
 
   /* Swiper navigation & pagination */
-  .swiper-button-next,
+  /* .swiper-button-next,
   .swiper-button-prev {
     color: var(--secondary-color);
   }
@@ -486,5 +486,33 @@ footer {
 
   .articlesSwiper .swiper-wrapper,
   .conferencesSwiper .swiper-wrapper {
-    display: flex !important; /* force la rangée horizontale */
-  }
+    display: flex !important; 
+  } */
+
+  .articlesSwiper{
+  padding-bottom:3rem;
+}
+.articlesSwiper .swiper-wrapper,
+.conferencesSwiper .swiper-wrapper{
+  display:flex!important;
+}
+.swiper-slide{
+  display:flex;
+  justify-content:center;
+}
+.publication-card{
+  background:#fff;
+  border-radius:1rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+  padding:1.5rem;
+  max-width:320px;
+  width:100%;
+}
+.publication-year{
+  background:var(--secondary-color);
+  color:var(--white);
+}
+/* navigation / bullets */
+.swiper-button-next,
+.swiper-button-prev{color:var(--secondary-color);}
+.swiper-pagination-bullet-active{background:var(--secondary-color);}
