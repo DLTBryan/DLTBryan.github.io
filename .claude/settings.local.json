@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/css/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
