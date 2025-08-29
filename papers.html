@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Portfolio de Recherche</title>
+    <title>Publications - Research Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap">
@@ -18,9 +18,8 @@
                 <a href="index.html" class="logo">Bryan Dallest</a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
                     <li class="nav-item"><a href="research.html" class="nav-link">Research Activities</a></li>
+                    <li class="nav-item"><a href="papers.html" class="nav-link active">Publications</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Let's get in touch</a></li>
                 </ul>
                 <div class="hamburger">
@@ -28,6 +27,12 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <select class="mobile-nav-dropdown" aria-label="Mobile navigation">
+                    <option value="index.html">Home</option>
+                    <option value="research.html">Research Activities</option>
+                    <option value="papers.html" selected>Publications</option>
+                    <option value="contact.html">Let's get in touch</option>
+                </select>
             </nav>
         </div>
     </header>
@@ -37,134 +42,277 @@
             <div class="hero-content">
                 <div class="publications-container">
                     <h1>Publications</h1>
-                    <p>Découvrez mes articles scientifiques et contributions académiques</p>
+                    <p>Discover my scientific articles and academic contributions</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="articles-carousel">
-            <h2 class="section-title">Articles de Journaux</h2>
-                <div class="swiper articlesSwiper">
-                    <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="publication-card">
-                                <h3 class="publication-title">Titre de la publication scientifique dans un journal</h3>
-                                <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                                <p class="publication-journal">Nom du Journal Scientifique</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                                <span class="publication-year">2025</span>
-                                <a href="#" class="publication-link">Lien vers l'article</a>
-                            </div>
-                        </div>
+    <!-- Publications Navigation -->
+    <nav class="publications-nav">
+        <div class="container">
+            <div class="nav-header">
+                <div class="nav-tabs">
+                    <button class="tab-btn active" data-target="journals">
+                        <i class="fas fa-book-open"></i>
+                        Journal Articles
+                    </button>
+                    <button class="tab-btn" data-target="conferences">
+                        <i class="fas fa-users"></i>
+                        Conference Papers
+                    </button>
+                    <button class="tab-btn" data-target="communications">
+                        <i class="fas fa-comments"></i>
+                        Other Communications
+                    </button>
+                </div>
+                <div class="sort-controls">
+                    <label for="sort-select">Sort by date:</label>
+                    <select id="sort-select" class="sort-dropdown">
+                        <option value="newest">Latest Research</option>
+                        <option value="oldest">Oldest First</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="publication-card">
-                                <h3 class="publication-title">Titre de la publication scientifique dans un journal</h3>
-                                <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                                <p class="publication-journal">Nom du Journal Scientifique</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                                <span class="publication-year">2024</span>
-                                <a href="#" class="publication-link">Lien vers l'article</a>
-                            </div>
-                        </div>
+    <!-- Journal Articles Section -->
+    <section class="publications-section active" id="journals">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-book-open"></i>
+                    Journal Articles
+                </h2>
+                <p class="section-description">Publications in peer-reviewed scientific journals</p>
+            </div>
+            
+            <div class="publications-grid" id="journals-grid">
+                <!-- Placeholder for when no journal articles are available -->
+                <div class="no-publications-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="placeholder-title">No Journal Articles Available</h3>
+                    <p class="placeholder-text">
+                        Journal publications will be displayed here when available. This section shows peer-reviewed articles with abstracts and links.
+                    </p>
+                    <div class="placeholder-suggestion">
+                        <p><strong>Examples of journal entries that could be included:</strong></p>
+                        <ul>
+                            <li>Peer-reviewed articles with abstracts and links</li>
+                            <li>Preprints and accepted manuscripts</li>
+                            <li>Special issues and invited contributions</li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="publication-card">
-                                <h3 class="publication-title">Titre de la publication scientifique dans un journal</h3>
-                                <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                                <p class="publication-journal">Nom du Journal Scientifique</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                                <span class="publication-year">2023</span>
-                                <a href="#" class="publication-link">Lien vers l'article</a>
-                            </div>
+                <!-- Example journal articles (commented out for later use)
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge">Journal</div>
+                    <h3 class="publication-title">Advanced Machine Learning Techniques for Data Analysis</h3>
+                    <p class="publication-authors">Bryan Dallest, Co-author 1, Co-author 2</p>
+                    <p class="publication-venue">Journal of Advanced Computing</p>
+                    <p class="publication-abstract">This paper presents novel approaches to machine learning algorithms for enhanced data processing and analysis in complex systems.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Article
+                            </a>
                         </div>
                     </div>
+                </article>
 
-                    <!-- Navigation / pagination -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    
-                </div>
+                <article class="publication-card hover-lift" data-year="2024">
+                    <div class="publication-badge">Journal</div>
+                    <h3 class="publication-title">Neural Models for Scientific Text Mining</h3>
+                    <p class="publication-authors">Bryan Dallest, Co-author 1</p>
+                    <p class="publication-venue">Computational Linguistics Review</p>
+                    <p class="publication-abstract">Development of NLP models for automated analysis and summarization of scientific publications and research papers.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2024</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Article
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                -->
+            </div>
         </div>
     </section>
 
-    <section style="background-color: var(--light-gray);">
-        <div class="container conferences-carousel">
-            <h2 class="section-title">Actes de Conférences</h2>
-
-            <div class="swiper conferencesSwiper">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                <div class="publication-card">
-                    <h3 class="publication-title">Titre de la publication scientifique en conférence</h3>
-                    <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                    <p class="publication-journal">Nom de la Conférence Internationale</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <span class="publication-year">2025</span>
-                    <a href="#" class="publication-link">Lien vers l'article</a>
-                </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                <div class="publication-card">
-                    <h3 class="publication-title">Titre de la publication scientifique en conférence</h3>
-                    <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                    <p class="publication-journal">Nom de la Conférence Internationale</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <span class="publication-year">2024</span>
-                    <a href="#" class="publication-link">Lien vers l'article</a>
-                </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                <div class="publication-card">
-                    <h3 class="publication-title">Titre de la publication scientifique en conférence</h3>
-                    <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                    <p class="publication-journal">Nom de la Conférence Internationale</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <span class="publication-year">2023</span>
-                    <a href="#" class="publication-link">Lien vers l'article</a>
-                </div>
-                </div>
-            </div><!-- /.swiper-wrapper -->
-
-            <!-- Navigation & pagination (hors wrapper) -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-            </div><!-- /.swiper -->
-        </div><!-- /.container -->
-    </section>
-
-    <section>
+    <!-- Conference Papers Section -->
+    <section class="publications-section" id="conferences">
         <div class="container">
-            <h2 class="section-title">Chapitres de Livres et Autres Publications</h2>
-            
-            <div class="publication">
-                <h3 class="publication-title">Titre du chapitre de livre</h3>
-                <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                <p class="publication-journal">Titre du Livre, Éditeur</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                <span class="publication-year">2024</span>
-                <p style="margin-top: 10px;"><a href="#" style="color: var(--secondary-color);">Lien vers la publication</a></p>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Conference Papers
+                </h2>
+                <p class="section-description">Presentations at international conferences</p>
             </div>
             
-            <div class="publication">
-                <h3 class="publication-title">Titre du rapport technique</h3>
-                <p class="publication-authors">Nom du Chercheur, Co-auteur 1, Co-auteur 2</p>
-                <p class="publication-journal">Institution ou Organisation</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                <span class="publication-year">2023</span>
-                <p style="margin-top: 10px;"><a href="#" style="color: var(--secondary-color);">Lien vers la publication</a></p>
+            <div class="publications-grid" id="conferences-grid">
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge conference">AIVR2025</div>
+                    <h3 class="publication-title">Towards an automatic shape classification of the tahitian pearl</h3>
+                    <p class="publication-authors">Bryan Dallest, Sébastien Chabrier, Alban Gabillon</p>
+                    <p class="publication-venue">9th International Conference on Artificial Intelligence and Virtual Reality</p>
+                    <p class="publication-abstract">
+                        Tahitian pearls are globally known for their luster, rainbow-like color
+                        palette, and various shapes. As pearl trading is French Polynesia’s second-largest
+                        revenue source after tourism, the manual classification remains labor-intensive,
+                        with shape evaluation consuming 60%–70% of the expert workload. Further-
+                        more, subtle shape variations make evaluation subjective, often requiring multi-
+                        ple experts to ensure consistency, increasing costs and time. This study intro-
+                        duces a scalable, automated pipeline for pearl shape classification. The system
+                        integrates a mirror-based multi-view imaging setup to capture comprehensive
+                        views, YOLOv8n for precise object detection, and SAM for segmentation. Dis-
+                        criminative handcrafted features are selected through NSGA-II and combined to
+                        enhance classification performance. XGBoost performs a two-step hierarchical
+                        classification using selected discriminative handcrafted features. First, pearls are
+                        categorized into broad classes (asymmetric, circled, symmetric), then the classi-
+                        fication of symmetric pearls is refined into sub-classes like button, oval, etc.
+                        Trained on a dataset of 3,929 pearls labeled by five experts, the system achieves
+                        weighted F1 scores of 95% and 75% for steps one and two, respectively. Multi-
+                        view data was proven crucial for capturing subtle shape variations, particularly
+                        for the fine-grained step two classification. Compared to deep-learning-based
+                        models, the pipeline demonstrates superior cross-validation stability and accu-
+                        racy. This framework provides a scalable and objective solution for pearl classi-
+                        fication, significantly reducing expert workload while improving consistency.
+                        Beyond pearls, the methodology could be used for other applications, such as
+                        jewelry or gemstone assessment.
+                    </p>
+                    <p class="publication-note">P.S. Will appear in Smart Innovation, Systems and Technologies (Springer).</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Paper
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication-card hover-lift" data-year="2023">
+                    <div class="publication-badge conference">ICADL 2023</div>
+                    <h3 class="publication-title">Appraisal of Paradise: A Sentiment Analysis Dataset of French Tourists’ Experiences in French Polynesia</h3>
+                    <p class="publication-authors">Bryan Dallest, Sébastien Chabrier, Alban Gabillon, Pierre Ghewy</p>
+                    <p class="publication-venue">ICADL 2023: International Conference on Asian Digital Libraries</p>
+                    <p class="publication-abstract">Sentiment analysis is a significant task within the Natural Language Processing (NLP) field. It aims to identify the sentiment polarity (positive, negative, or neutral) within textual data. This paper presents the development and annotation of a specialized dataset, unprecedented in its focus on French Polynesian tourism. This corpus is composed of tourists’ comments written in French concerning their experience in French Polynesia. 
+                        The collated dataset comprises 1,592 comments and 10,729 sentiment-annotated triplets (aspect, opinion, sentiment), extracted from these comments. 
+                        Since the issue of overlapping triplets - i.e., instances where triplets within the same comment share aspects or opinions - emerged during construction, we partitioned the original dataset into two distinct subsets: the first consists of 467 comments (2,235 triplets) devoid of overlap, while the other includes 1,125 comments (8,494 triplets) with at least one overlapping triplet. 
+                        These three datasets, which enhance the availability of French NLP datasets for sentiment analysis, are accessible on the Hugging Face platform.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2023</span>
+                        <div class="publication-actions">
+                            <a href="https://link.springer.com/chapter/10.1007/978-981-99-8085-7_11" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read Paper
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Communications Section -->
+    <section class="publications-section" id="communications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Other Communications
+                </h2>
+                <p class="section-description">Other forms of scientific communication and outreach</p>
+            </div>
+            
+            <div class="publications-grid" id="communications-grid">
+                <!-- Placeholder for when no communications are available -->
+                <div class="no-publications-placeholder">
+                    <div class="placeholder-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="placeholder-title">No Communications Available</h3>
+                    <p class="placeholder-text">
+                        Other forms of scientific communication such as workshops, podcasts, 
+                        interviews, and public lectures will be displayed here when available.
+                    </p>
+                    <div class="placeholder-suggestion">
+                        <p><strong>Examples of communications that could be included:</strong></p>
+                        <ul>
+                            <li>Workshop presentations and tutorials</li>
+                            <li>Podcast interviews and radio appearances</li>
+                            <li>Public lectures and science outreach events</li>
+                            <li>Blog posts and technical articles</li>
+                            <li>Invited talks and seminars</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Example communications (commented out for later use) -->
+                <!--
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge communication">Communication</div>
+                    <h3 class="publication-title">Workshop on Emerging AI Technologies</h3>
+                    <p class="publication-authors">Bryan Dallest</p>
+                    <p class="publication-venue">Tech Innovation Workshop Series</p>
+                    <p class="publication-abstract">Interactive workshop exploring the latest trends and developments in artificial intelligence and machine learning applications.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication-card hover-lift" data-year="2024">
+                    <div class="publication-badge communication">Communication</div>
+                    <h3 class="publication-title">Public Lecture on Data Science Ethics</h3>
+                    <p class="publication-authors">Bryan Dallest</p>
+                    <p class="publication-venue">University Public Lecture Series</p>
+                    <p class="publication-abstract">Public lecture discussing the ethical implications of data science and the importance of responsible AI development in modern society.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2024</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Details
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="publication-card hover-lift" data-year="2024">
+                    <div class="publication-badge communication">Communication</div>
+                    <h3 class="publication-title">Podcast Interview: The Future of Computing</h3>
+                    <p class="publication-authors">Bryan Dallest</p>
+                    <p class="publication-venue">Tech Talk Podcast</p>
+                    <p class="publication-abstract">In-depth interview discussing current research trends, future directions in computing, and the impact of emerging technologies on society.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2024</span>
+                        <div class="publication-actions">
+                            <a href="#" class="btn-secondary">
+                                <i class="fas fa-external-link-alt"></i>
+                                Listen
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                -->
             </div>
         </div>
     </section>
@@ -172,10 +320,8 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-researchgate"></i></a>
+                <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/bryan-dallest-5b78b2156/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; 2025 Bryan Dallest. Tous droits réservés.</p>
         </div>

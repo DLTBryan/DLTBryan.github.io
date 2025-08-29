@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
-    <title>Bryan Dallest website</title>
+    <title>Bryan Dallest - PhD Researcher in AI & ML</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
@@ -18,10 +18,9 @@
             <nav class="navbar">
                 <a href="index.html" class="logo">Bryan Dallest</a>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="research.html" class="nav-link">Research Activities</a></li>
+                    <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Let's get in touch</a></li>
                 </ul>
                 <div class="hamburger">
@@ -29,9 +28,16 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <select class="mobile-nav-dropdown" aria-label="Mobile navigation">
+                    <option value="index.html" selected>Home</option>
+                    <option value="research.html">Research Activities</option>
+                    <option value="papers.html">Publications</option>
+                    <option value="contact.html">Let's get in touch</option>
+                </select>
             </nav>
         </div>
     </header>
+    
 
     <section class="hero">
         <div class="container">
@@ -42,8 +48,8 @@
                     </div>
                     <div class="profile-info">
                         <h1>Bryan Dallest</h1>
-                        <p>PhD Student</p>
-                        <p>AI, Machine Learning, Image processing, Tahitian pearls, NLP</p>
+                        <p>PhD Student at GePaSud Laboratory</p>
+                        <p>AI, Machine Learning, Image Processing, Tahitian Pearls, NLP</p>
                     </div>
                 </div>
             </div>
@@ -52,50 +58,63 @@
 
     <section>
         <div class="container">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="card">
-                <p>Raised on the remote island of Tahiti in French Polynesia, I am currently in PhD studies focused on AI and Machine Learning applied to Tahitian pearl classification</p>
-                <p>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section style="background-color: var(--light-gray);">
-        <div class="container">
-            <h2 class="section-title">Research Profiles</h2>
-            <div class="research-logos">
-                <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" class="research-logo">
-                    <img src="images/google-scholar.svg" alt="Google Scholar" title="Google Scholar">
-                </a>
-                <a href="#" class="research-logo">
-                    <img src="images/orcid.svg" alt="ORCID" title="ORCID">
-                </a>
-                <a href="#" class="research-logo">
-                    <img src="images/academia.svg" alt="Academia" title="Academia">
-                </a>
+                <p>I am a PhD candidate specializing in Artificial Intelligence and Machine Learning at the University of French Polynesia. My research focuses on developing automated systems for the quality assessment of Tahitian pearls, combining computer vision, deep learning, and traditional expertise to support French Polynesia's pearl industry.</p>
+                <p>My work bridges the gap between AI technology and a traditional Polynesian jewel, aiming to 
+                    enhance the evaluation process while enhancing the valuation of the Tahitian pearl on the international market.</p>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 25px; flex-wrap: wrap;">
+                    <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" target="_blank" style="text-decoration: none; color: var(--primary-color); display: flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--light-gray); border-radius: 25px; transition: all 0.3s ease;">
+                        <i class="fab fa-google" style="font-size: 1.2rem;"></i>
+                        <span>Google Scholar</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bryan-dallest-5b78b2156/" target="_blank" style="text-decoration: none; color: var(--primary-color); display: flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid var(--light-gray); border-radius: 25px; transition: all 0.3s ease;">
+                        <i class="fab fa-linkedin-in" style="font-size: 1.2rem;"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <section>
         <div class="container">
-            <h2 class="section-title">Recent Publications</h2>
-            <div class="publication">
-                <h3 class="publication-title">Towards an automatic shape classification of Tahitian pearls</h3>
-                <p class="publication-authors"><u>Bryan Dallest</u>, Sébastien Chabrier, Alban Gabillon</p>
-                <p class="publication-journal">8th AIVR 2025,10-13 July 2025 in publication</p>
-                <span class="publication-year">2025</span>
+            <h2 class="section-title">Featured Publications</h2>
+            <div class="publications-grid">
+                <article class="publication-card hover-lift">
+                    <div class="publication-badge conference">AIVR2025</div>
+                    <h3 class="publication-title">Towards an automatic shape classification of Tahitian pearls</h3>
+                    <p class="publication-authors"><u>Bryan Dallest</u>, Sébastien Chabrier, Alban Gabillon</p>
+                    <p class="publication-venue">9th International Conference on Artificial Intelligence and Virtual Reality</p>
+                    <p class="publication-abstract">This study introduces a scalable, automated pipeline for pearl shape classification using modern computer vision and machine learning techniques.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <a href="papers.html" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Details
+                        </a>
+                    </div>
+                </article>
+                
+                <article class="publication-card hover-lift">
+                    <div class="publication-badge">ICADL2023</div>
+                    <h3 class="publication-title">Appraisal of Paradise: A Sentiment Analysis Dataset</h3>
+                    <p class="publication-authors"><u>Bryan Dallest</u>, Sébastien Chabrier, Alban Gabillon, Pierre Ghewy</p>
+                    <p class="publication-venue">International Conference on Asia-Pacific Digital Libraries</p>
+                    <p class="publication-abstract">Development of a specialized sentiment analysis dataset focused on French tourists' experiences in French Polynesia.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2023</span>
+                        <a href="papers.html" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Details
+                        </a>
+                    </div>
+                </article>
             </div>
-            <div class="publication">
-                <h3 class="publication-title">Appraisal of Paradise: A Sentiment Analysis Dataset of French Tourists’ Experiences in French Polynesia</h3>
-                <p class="publication-authors"><u>Bryan Dallest</u>, Sébastien Chabrier, Alban Gabillon & Pierre Ghewy </p>
-                <p class="publication-journal">International Conference on Asia-Pacific Digital Libraries, ICADL 2023</p>
-                <span class="publication-year">2023</span>
-            </div>
-            <div style="text-align: center; margin-top: 30px;">
+            <div style="text-align: center; margin-top: 40px;">
                 <a href="papers.html" style="text-decoration: none;">
-                    <button>Voir toutes les publications</button>
+                    <button style="padding: 12px 30px; font-size: 1.1rem;">View All Publications</button>
                 </a>
             </div>
         </div>
@@ -103,25 +122,23 @@
 
     <section style="background-color: var(--light-gray);">
         <div class="container">
-            <h2 class="section-title">Research Activities</h2>
-            <div class="activity">
-                <div class="activity-date">2025 - Présent</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Phénotyp</h3>
-                    <p>Description du projet de recherche en cours. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
+            <h2 class="section-title">Current Research Focus</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3 class="section-subtitle"><i class="fas fa-gem"></i> Pearl Classification</h3>
+                    <p>Developing AI-powered systems for automated quality assessment of Tahitian pearls, combining computer vision by using traditional expertise.</p>
+     
                 </div>
-            </div>
-            <div class="activity">
-                <div class="activity-date">2023 - 2024</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">TROPICAL</h3>
-                    <p>Description du projet de recherche précédent. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
+                <div class="card">
+                    <h3 class="section-subtitle"><i class="fas fa-brain"></i> Machine Learning</h3>
+                    <p>Using Deep learning techniques, machine learning and image processing to automate Tahitian pearl classification to support the French Polynesian economy.</p>
+
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="research.html" style="text-decoration: none;">
-                    <button>Voir toutes les activités</button>
-                </a>
+                <div class="card">
+                    <h3 class="section-subtitle"><i class="fas fa-users"></i> Collaboration</h3>
+                    <p>Working closely with local industries and institutions to ensure research has real-world impact on French Polynesian economy.</p>
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -129,9 +146,8 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-researchgate"></i></a>
+                <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/bryan-dallest-5b78b2156/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; 2025 Bryan Dallest. All rights reserved.</p>
         </div>

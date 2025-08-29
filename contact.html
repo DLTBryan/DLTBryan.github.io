@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#ffffff">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Let's get in touch - Portfolio de Recherche</title>
+    <title>Let's get in touch - Research Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
@@ -18,16 +18,21 @@
                 <a href="index.html" class="logo">Bryan Dallest</a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
                     <li class="nav-item"><a href="research.html" class="nav-link">Research Activities</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Let's get in touch</a></li>
+                    <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Let's get in touch</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <select class="mobile-nav-dropdown" aria-label="Mobile navigation">
+                    <option value="index.html">Home</option>
+                    <option value="research.html">Research Activities</option>
+                    <option value="papers.html">Publications</option>
+                    <option value="contact.html" selected>Let's get in touch</option>
+                </select>
             </nav>
         </div>
     </header>
@@ -45,7 +50,7 @@
 
     <section>
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="grid contact-grid">
                 <div>
                     <h2 class="section-title">Contact information</h2>
                     <div class="card">
@@ -82,16 +87,8 @@
                             </a>
                         </div>
                         
-                        <h3 class="section-subtitle" style="margin-top: 30px;">Réseaux Sociaux</h3>
+                        <h3 class="section-subtitle" style="margin-top: 30px;">Social Networks</h3>
                         <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
-                            <a href="#" style="text-decoration: none; color: var(--primary-color);">
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: var(--light-gray); border-radius: 50%;">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                    <span>Twitter</span>
-                                </div>
-                            </a>
                             <a href="#" style="text-decoration: none; color: var(--primary-color);">
                                 <div style="display: flex; align-items: center; gap: 10px;">
                                     <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: var(--light-gray); border-radius: 50%;">
@@ -100,41 +97,7 @@
                                     <span>LinkedIn</span>
                                 </div>
                             </a>
-                            <a href="#" style="text-decoration: none; color: var(--primary-color);">
-                                <div style="display: flex; align-items: center; gap: 10px;">
-                                    <div style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background-color: var(--light-gray); border-radius: 50%;">
-                                        <i class="fab fa-github"></i>
-                                    </div>
-                                    <span>GitHub</span>
-                                </div>
-                            </a>
                         </div>
-                    </div>
-                </div>
-                
-                <div>
-                    <h2 class="section-title">Formulaire de Contact</h2>
-                    <div class="card">
-                        <form class="contact-form" action="https://formspree.io/f/your-formspree-id" method="POST">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="The subject of yout message" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" placeholder="Your message" required></textarea>
-                            </div>
-                            <input type="hidden" name="_next" value="https://votre-nom-utilisateur.github.io/thank-you.html">
-                            <button type="submit">Envoyer</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -143,14 +106,14 @@
 
     <section style="background-color: var(--light-gray);">
         <div class="container">
-            <h2 class="section-title">Disponibilité pour Collaborations</h2>
+            <h2 class="section-title">Collaboration Opportunities</h2>
             <div class="card">
-                <p>Je suis ouvert à diverses opportunités de collaboration dans mes domaines de recherche. N'hésitez pas à me contacter pour discuter de projets potentiels, de partenariats académiques ou industriels, ou de possibilités de co-encadrement d'étudiants.</p>
-                <p>Domaines d'intérêt particulier pour les collaborations :</p>
+                <p>I am open to various collaboration opportunities within my research domains. Feel free to contact me to discuss potential projects, academic or industrial partnerships, or student co-supervision possibilities.</p>
+                <p>Research domains of particular interest for collaborations:</p>
                 <ul style="list-style-position: inside; padding-left: 20px; margin-top: 10px;">
-                    <li>Domaine de recherche 1</li>
-                    <li>Domaine de recherche 2</li>
-                    <li>Domaine de recherche 3</li>
+                    <li><strong>Pearl-related work:</strong> Quality assessment, shape classification, surface defect detection, and automated grading systems for Tahitian pearls</li>
+                    <li><strong>Machine Learning:</strong> Computer vision applications, deep learning models, automated classification systems, and feature extraction techniques</li>
+                    <li><strong>Artificial Intelligence:</strong> AI applications in traditional industries, cultural heritage preservation through technology, and interdisciplinary AI research</li>
                 </ul>
             </div>
         </div>
@@ -159,10 +122,8 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-researchgate"></i></a>
+                <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/bryan-dallest-5b78b2156/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; 2025 Bryan Dallest. All rights reserved.</p>
         </div>

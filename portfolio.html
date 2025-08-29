@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Portfolio de Recherche</title>
+    <title>Portfolio - Research Portfolio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -16,7 +18,7 @@
                 <a href="index.html" class="logo">Bryan Dallest</a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
                     <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
                     <li class="nav-item"><a href="research.html" class="nav-link">Research Activities</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Let's get in touch</a></li>
@@ -26,6 +28,13 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <select class="mobile-nav-dropdown" aria-label="Mobile navigation">
+                    <option value="index.html">Home</option>
+                    <option value="portfolio.html" selected>Portfolio</option>
+                    <option value="papers.html">Publications</option>
+                    <option value="research.html">Research Activities</option>
+                    <option value="contact.html">Let's get in touch</option>
+                </select>
             </nav>
         </div>
     </header>
@@ -43,25 +52,30 @@
 
     <section>
         <div class="container">
-            <h2 class="section-title">Projets de Recherche</h2>
-            <div class="grid">
-                <div class="card animate-on-scroll">
-                    <h3 class="section-subtitle">Projet de Recherche 1</h3>
-                    <p>Description détaillée du projet de recherche. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Technologies utilisées:</strong> Lorem ipsum, dolor sit amet, consectetur</p>
-                    <p><strong>Période:</strong> 2023 - 2025</p>
+            <h2 class="section-title">Research Projects</h2>
+            
+            <!-- Current/Most Recent Project -->
+            <div class="activity">
+                <div class="activity-date">2024 - Present</div>
+                <div class="activity-content">
+                    <h3 class="activity-title">Phénotyp</h3>
+                    <p>Phenotyp is a project focused on the development of an automated system to assess criteria of the Tahitian Pearl. This project aims to enhance the evaluation process of pearls by utilizing advanced image processing and deep learning/machine learning techniques.</p>
+                    <p><strong>Objectives:</strong> Develop scalable, automated pipeline for pearl shape classification using modern computer vision and machine learning approaches to reduce expert workload and improve consistency.</p>
+                    <p><strong>Collaborators:</strong> Direction des ressources marines (DRM), Pearl Quality Control Cell (CCQP), Pearl farmers</p>
+                    <p><strong>Funding:</strong> DRM & UPF</p>
+                    <p><strong>Associated publications:</strong> <a href="papers.html" style="color: var(--secondary-color);">View publications</a></p>
                 </div>
-                <div class="card animate-on-scroll">
-                    <h3 class="section-subtitle">Projet de Recherche 2</h3>
-                    <p>Description détaillée du projet de recherche. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Technologies utilisées:</strong> Lorem ipsum, dolor sit amet, consectetur</p>
-                    <p><strong>Période:</strong> 2022 - 2023</p>
-                </div>
-                <div class="card animate-on-scroll">
-                    <h3 class="section-subtitle">Projet de Recherche 3</h3>
-                    <p>Description détaillée du projet de recherche. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Technologies utilisées:</strong> Lorem ipsum, dolor sit amet, consectetur</p>
-                    <p><strong>Période:</strong> 2021 - 2022</p>
+            </div>
+            
+            <!-- Previous Project -->
+            <div class="activity">
+                <div class="activity-date">2023 - 2023</div>
+                <div class="activity-content">
+                    <h3 class="activity-title">TROPICAL</h3>
+                    <p>Development and annotation of a specialized sentiment analysis dataset focused on French Polynesian tourism. This corpus comprises tourists' comments in French concerning their experiences in French Polynesia.</p>
+                    <p><strong>Results:</strong> Annotated tourist comments dataset in terms of sentiment, using the triplet ASOTE extraction method (1,592 comments and 10,729 sentiment-annotated triplets).</p>
+                    <p><strong>Technologies used:</strong> Natural Language Processing, Sentiment Analysis, French NLP</p>
+                    <p><strong>Associated publications:</strong> <a href="papers.html" style="color: var(--secondary-color);">View publications</a></p>
                 </div>
             </div>
         </div>
@@ -107,19 +121,14 @@
             <h2 class="section-title">Collaborations</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 class="section-subtitle">Institution 1</h3>
+                    <h3 class="section-subtitle">DRM (Direction des Ressources Marines)</h3>
                     <p>Description de la collaboration avec cette institution. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Période:</strong> 2023 - Présent</p>
+                    <p><strong>Period:</strong> 2023 - Présent</p>
                 </div>
                 <div class="card">
-                    <h3 class="section-subtitle">Institution 2</h3>
+                    <h3 class="section-subtitle">CETOP</h3>
                     <p>Description de la collaboration avec cette institution. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Période:</strong> 2021 - 2023</p>
-                </div>
-                <div class="card">
-                    <h3 class="section-subtitle">Institution 3</h3>
-                    <p>Description de la collaboration avec cette institution. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p><strong>Période:</strong> 2020 - 2021</p>
+                    <p><strong>PPeriod:</strong> 2021 - 2023</p>
                 </div>
             </div>
         </div>
@@ -136,7 +145,7 @@
             <p class="copyright">&copy; 2025 Bryan Dallest. Tous droits réservés.</p>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

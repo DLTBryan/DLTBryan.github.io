@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Activities - Portfolio de Recherche</title>
+    <title>Research Activities & Portfolio - Bryan Dallest</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive-fixes.css">
@@ -16,9 +17,8 @@
                 <a href="index.html" class="logo">Bryan Dallest</a>
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="research.html" class="nav-link active">Research Activities</a></li>
                     <li class="nav-item"><a href="papers.html" class="nav-link">Publications</a></li>
-                    <li class="nav-item"><a href="research.html" class="nav-link">Research Activities</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Let's get in touch</a></li>
                 </ul>
                 <div class="hamburger">
@@ -26,6 +26,12 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <select class="mobile-nav-dropdown" aria-label="Mobile navigation">
+                    <option value="index.html">Home</option>
+                    <option value="research.html" selected>Research Activities</option>
+                    <option value="papers.html">Publications</option>
+                    <option value="contact.html">Let's get in touch</option>
+                </select>
             </nav>
         </div>
     </header>
@@ -34,106 +40,298 @@
         <div class="container">
             <div class="hero-content">
                 <div class="research-activities-container">
-                    <h1>Research Activities</h1>
-                    <p>Découvrez mes projets de recherche actuels et passés</p>
+                    <h1>Research Activities & Portfolio</h1>
+                    <p>Explore my current and past research projects, activities, and academic contributions</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <!-- Navigation buttons for subsections -->
+    <nav class="publications-nav" style="position: static; top: auto;">
         <div class="container">
-            <h2 class="section-title">Projets de Recherche Actuels</h2>
+            <div class="nav-header">
+                <div class="nav-tabs">
+                    <button class="tab-btn active" data-target="interns-section">
+                        <i class="fas fa-users"></i>
+                        Interns
+                    </button>
+                    <button class="tab-btn" data-target="projects-section">
+                        <i class="fas fa-project-diagram"></i>
+                        Research Projects
+                    </button>
+                    <button class="tab-btn" data-target="skills-section">
+                        <i class="fas fa-cogs"></i>
+                        Research Skills
+                    </button>
+                    <button class="tab-btn" data-target="collaborations-section">
+                        <i class="fas fa-handshake"></i>
+                        Collaborations
+                    </button>
+                    <button class="tab-btn" data-target="conferences-section">
+                        <i class="fas fa-comments"></i>
+                        Conferences & Talks
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="interns-section" class="publications-section active"> 
+        <!-- Section for interns -->
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Previous and Current Interns
+                </h2>
+                <p class="section-description">Students who have contributed to research projects under my supervision</p>
+            </div>
+            <div class="interns-carousel-container">
+                <div class="swiper internsSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="intern-card">
+                                <div class="status-indicator completed">
+                                    <span class="status-text">Completed</span>
+                                </div>
+                                <img src="https://media.licdn.com/dms/image/v2/D4E03AQG6Dj5iW7CqMA/profile-displayphoto-shrink_200_200/B4EZOKsQ3NHAAc-/0/1733198680824?e=2147483647&v=beta&t=2QOIqnjRX2UiLZ1lEIDb7RltImkJ8GnD2GfH1jFr-x0"
+                                    alt="Photo de Téo Martin"
+                                    class="intern-photo">
+                                <h3 class="intern-name">Téo Martin</h3>
+                                <p class="intern-detail"><strong>School:</strong> ESIEE Paris</p>
+                                <p class="intern-detail"><strong>Duration:</strong> February 2025 - August 2025</p>
+                                <p class="intern-description">Téo worked on the surface defect detection and classification of Tahitian Pearls. This work contributed to the thesis of Bryan Dallest</p>
+                                <p class="intern-directors"><strong>Directors:</strong> Sébastien Chabrier, <strong>Bryan Dallest</strong>, Alban Gabillon</p>
+                                <div class="intern-social">
+                                    <a href="https://www.linkedin.com/in/tt-martin/" target="_blank" class="social-link">
+                                        <img src="./images/LI-In-Bug.png" alt="LinkedIn" class="linkedin-icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    
+                    <!-- Navigation arrows -->
+                    <div class="swiper-button-next intern-nav-next"></div>
+                    <div class="swiper-button-prev intern-nav-prev"></div>
+                    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination intern-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects-section" class="publications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Research Projects
+                </h2>
+                <p class="section-description">Current and completed research projects with detailed objectives and outcomes</p>
+            </div>
             
+            <!-- Current/Most Recent Project -->
             <div class="activity">
-                <div class="activity-date">2024 - Présent</div>
+                <div class="activity-date">2024 - Present</div>
                 <div class="activity-content">
-                    <h3 class="activity-title">Titre du projet de recherche actuel</h3>
-                    <p>Description détaillée du projet de recherche en cours. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Objectifs:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-                    <p><strong>Collaborateurs:</strong> Institution 1, Institution 2</p>
-                    <p><strong>Financement:</strong> Organisme de financement</p>
+                    <h3 class="activity-title">Phénotyp</h3>
+                    <p>Phenotyp is a project focused on the development of an automated system to assess criteria of the Tahitian Pearl. This project aims to enhance the evaluation process of pearls by utilizing advanced image processing and deep learning/machine learning techniques.</p>
+                    <p><strong>Objectives:</strong> Develop scalable, automated pipeline for pearl shape classification using modern computer vision and machine learning approaches to reduce expert workload and improve consistency.</p>
+                    <p><strong>Collaborators:</strong> Direction des ressources marines (DRM), Pearl Quality Control Cell (CCQP), Pearl farmers</p>
+                    <p><strong>Funding:</strong> DRM & UPF</p>
+                    <p><strong>Associated publications:</strong> <a href="papers.html" style="color: var(--secondary-color);">View publications</a></p>
                 </div>
             </div>
             
+            <!-- Previous Project -->
             <div class="activity">
-                <div class="activity-date">2023 - Présent</div>
+                <div class="activity-date">2023 - 2023</div>
                 <div class="activity-content">
-                    <h3 class="activity-title">Titre du projet de recherche actuel</h3>
-                    <p>Description détaillée du projet de recherche en cours. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Objectifs:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-                    <p><strong>Collaborateurs:</strong> Institution 1, Institution 2</p>
-                    <p><strong>Financement:</strong> Organisme de financement</p>
+                    <h3 class="activity-title">TROPICAL</h3>
+                    <p>Development and annotation of a specialized sentiment analysis dataset focused on French Polynesian tourism. This corpus comprises tourists' comments in French concerning their experiences in French Polynesia.</p>
+                    <p><strong>Results:</strong> Annotated tourist comments dataset in terms of sentiment, using the triplet ASOTE extraction method (1,592 comments and 10,729 sentiment-annotated triplets).</p>
+                    <p><strong>Technologies used:</strong> Natural Language Processing, Sentiment Analysis, French NLP</p>
+                    <p><strong>Associated publications:</strong> <a href="papers.html" style="color: var(--secondary-color);">View publications</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background-color: var(--light-gray);">
+    <!-- Research Skills Section -->
+    <section id="skills-section" class="publications-section">
         <div class="container">
-            <h2 class="section-title">Projets de Recherche Passés</h2>
-            
-            <div class="activity">
-                <div class="activity-date">2021 - 2023</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre du projet de recherche passé</h3>
-                    <p>Description détaillée du projet de recherche passé. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Résultats:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-                    <p><strong>Publications associées:</strong> <a href="papers.html" style="color: var(--secondary-color);">Voir les publications</a></p>
-                </div>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Research Skills
+                </h2>
+                <p class="section-description">Technical skills and methodologies applied in my research work</p>
             </div>
-            
-            <div class="activity">
-                <div class="activity-date">2019 - 2021</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre du projet de recherche passé</h3>
-                    <p>Description détaillée du projet de recherche passé. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Résultats:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-                    <p><strong>Publications associées:</strong> <a href="papers.html" style="color: var(--secondary-color);">Voir les publications</a></p>
+            <div class="grid">
+                <div class="card">
+                    <h3 class="section-subtitle">Methodologies</h3>
+                    <ul style="list-style-position: inside; padding-left: 20px;">
+                        <li>Computer Vision & Image Processing</li>
+                        <li>Deep Learning & Neural Networks</li>
+                        <li>Machine Learning Classification</li>
+                        <li>Natural Language Processing</li>
+                        <li>Sentiment Analysis & Text Mining</li>
+                        <li>Multi-objective Optimization (NSGA-II)</li>
+                    </ul>
                 </div>
-            </div>
-            
-            <div class="activity">
-                <div class="activity-date">2017 - 2019</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre du projet de recherche passé</h3>
-                    <p>Description détaillée du projet de recherche passé. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
-                    <p><strong>Résultats:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt.</p>
-                    <p><strong>Publications associées:</strong> <a href="papers.html" style="color: var(--secondary-color);">Voir les publications</a></p>
+                <div class="card">
+                    <h3 class="section-subtitle">Tools & Technologies</h3>
+                    <ul style="list-style-position: inside; padding-left: 20px;">
+                        <li>Python (PyTorch, TensorFlow, scikit-learn), C, C++</li>
+                        <li>YOLO, SAM for Object Detection & Segmentation</li>
+                        <li>XGBoost for Classification</li>
+                        <li>OpenCV for Image Processing</li>
+                        <li>Hugging Face for NLP Models</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="section-subtitle">Domains of Expertise</h3>
+                    <ul style="list-style-position: inside; padding-left: 20px;">
+                        <li>Automated Quality Assessment Systems</li>
+                        <li>Pearl & Gemstone Classification</li>>
+                        <li>French Polynesian Tourism Analysis</li>
+                        <li>Industry-Academic Collaboration</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <!-- Collaborations Section -->
+    <section id="collaborations-section" class="publications-section">
         <div class="container">
-            <h2 class="section-title">Conférences et Séminaires</h2>
-            
-            <div class="activity">
-                <div class="activity-date">Juin 2025</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre de la présentation à la conférence</h3>
-                    <p>Nom de la Conférence Internationale, Lieu</p>
-                    <p>Description de la présentation. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-handshake"></i>
+                    Collaborations
+                </h2>
+                <p class="section-description">Institutional and industry partnerships supporting my research</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3 class="section-subtitle">DRM (Direction des Ressources Marines)</h3>
+                    <p>Active collaboration with the Marine Resources Directorate of French Polynesia for pearl quality assessment research. This partnership provides access to expert knowledge, pearl samples, and industry validation for automated classification systems.</p>
+                    <p><strong>Period:</strong> 2023 - Present</p>
+                </div>
+                <div class="card">
+                    <h3 class="section-subtitle">Pearl Quality Control Cell (CCQP)</h3>
+                    <p>Working closely with government pearl experts to understand evaluation methods. This collaboration ensures practical applicability of research outcomes.</p>
+                    <p><strong>Period:</strong> 2024 - Present</p>
                 </div>
             </div>
-            
-            <div class="activity">
-                <div class="activity-date">Mars 2025</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre du séminaire</h3>
-                    <p>Nom de l'Institution, Lieu</p>
-                    <p>Description du séminaire. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
+        </div>
+    </section>
+
+    <section id="conferences-section" class="publications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-comments"></i>
+                    Conferences, Seminars and Presentations
+                </h2>
+                <p class="section-description">Talks, interviews and public outreach aligned with my research</p>
             </div>
-            
-            <div class="activity">
-                <div class="activity-date">Novembre 2024</div>
-                <div class="activity-content">
-                    <h3 class="activity-title">Titre de la présentation à la conférence</h3>
-                    <p>Nom de la Conférence Internationale, Lieu</p>
-                    <p>Description de la présentation. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
+
+            <div class="publications-grid">
+                <!-- July 2025 -->
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge conference">Conference</div>
+                    <h3 class="publication-title">Towards an automatic shape classification of the Tahitian Pearl</h3>
+                    <p class="publication-venue">8th AIVR 2025 — Osaka, Japan</p>
+                    <p class="publication-abstract">Presentation of ongoing work on automated shape classification for Tahitian pearls using modern computer vision pipelines. Details to be added after conference.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                    </div>
+                </article>
+
+                <!-- June 2025 -->
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge">Interview</div>
+                    <h3 class="publication-title">Interview by Radio.pf</h3>
+                    <p class="publication-venue">Radio.pf — Tahiti, French Polynesia</p>
+                    <p class="publication-abstract">Discussion about my research on Tahitian pearls, its potential impact on local industry, and how AI supports quality assessment.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a class="btn-secondary" target="_blank" href="https://www.radio1.pf/lintelligence-artificielle-pour-un-meilleur-tri-des-perles-de-tahiti/">
+                                <i class="fas fa-external-link-alt"></i>
+                                Read article
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- May 2025 -->
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge">Conference</div>
+                    <h3 class="publication-title"><i>Les Doctoriales</i> of French Polynesia</h3>
+                    <p class="publication-venue">University of French Polynesia</p>
+                    <p class="publication-abstract">Presentation to a public audience on the potential impact of my thesis for the Tahitian pearl sector. Awarded for innovation and cultural impact by a jury of researchers and professionals.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a class="btn-secondary" target="_blank" href="https://recherche.upf.pf/en/actualite/retour-sur-les-doctoriales-2025/">
+                                <i class="fas fa-external-link-alt"></i>
+                                Event recap
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- November 2024 -->
+                <article class="publication-card hover-lift" data-year="2024">
+                    <div class="publication-badge conference">Seminar</div>
+                    <h3 class="publication-title">Advances of Tahitian pearl shape classification</h3>
+                    <p class="publication-venue">GePaSud annual seminar — University of French Polynesia</p>
+                    <p class="publication-abstract">Overview of technical progress and preliminary results on pearl shape classification.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2024</span>
+                    </div>
+                </article>
+
+                <!-- October 2024 -->
+                <article class="publication-card hover-lift" data-year="2024">
+                    <div class="publication-badge">Science<br>Festival</div>
+                    <h3 class="publication-title">Vaa'a of sciences — Science Festival</h3>
+                    <p class="publication-venue">Territory Assembly — Papeete, Tahiti, French Polynesia</p>
+                    <p class="publication-abstract">Public outreach on Tahitian pearl research to audiences ranging from primary to high school students.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2024</span>
+                        <div class="publication-actions">
+                            <a class="btn-secondary" target="_blank" href="https://www.upf.pf/sites/default/files/2024-10/Dossier%20de%20presse%20-%20fe%CC%82te%20de%20la%20Science%202024%20-%20Te%20mana%20o%20te%20moana_re%CC%81duit.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                Press release
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Organizing Committee -->
+                <article class="publication-card hover-lift" data-year="2025">
+                    <div class="publication-badge">Organizing<br>Committee</div>
+                    <h3 class="publication-title">TranPolyn<br>Seminar</h3>
+                    <p class="publication-venue">CNRS (Centre National de la Recherche Scientifique)</p>
+                    <p class="publication-abstract">Organizing committee member for the TranPolyn seminar series, contributing to the coordination of interdisciplinary research presentations and academic exchanges focused on French Polynesian research.</p>
+                    <div class="publication-footer">
+                        <span class="publication-year">2025</span>
+                        <div class="publication-actions">
+                            <a class="btn-secondary" target="_blank" href="https://tranpolyn.sciencesconf.org/">
+                                <i class="fas fa-file-pdf"></i>
+                                Seminar website
+                            </a>
+                    </div>
+                    </div>
+                    
+                </article>
             </div>
         </div>
     </section>
@@ -141,15 +339,14 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-researchgate"></i></a>
+                <a href="https://scholar.google.com/citations?user=KFzqp-YAAAAJ&hl=en&oi=ao" class="social-link"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/bryan-dallest-5b78b2156/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; 2025 Bryan Dallest. Tous droits réservés.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
