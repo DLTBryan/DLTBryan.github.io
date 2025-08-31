@@ -239,9 +239,17 @@ header.navbar-minimized .nav-link {
   }
 }
 
-/* Hide mobile nav icon on desktop */
+/* Hide mobile nav icon and overlay on desktop */
 @media (min-width: 769px) {
   .mobile-nav-icon {
+    display: none !important;
+  }
+  
+  .mobile-nav-overlay {
+    display: none !important;
+  }
+  
+  .hamburger {
     display: none !important;
   }
 }
