@@ -2,14 +2,73 @@
 .hamburger {
   display: none;
   cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .hamburger .bar {
   display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
+  width: 22px;
+  height: 2px;
   background-color: var(--primary-color);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Minimized navigation on scroll */
+header.navbar-minimized {
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header.navbar-minimized .navbar {
+  padding: 8px 0;
+}
+
+header.navbar-minimized .logo {
+  font-size: 1.2rem;
+  transition: font-size 0.3s ease;
+}
+
+header.navbar-minimized .nav-menu {
+  gap: 15px;
+}
+
+header.navbar-minimized .nav-link {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+/* Hide hamburger menu when nav is minimized on mobile */
+@media (max-width: 768px) {
+  header.navbar-minimized .hamburger {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  header.navbar-minimized .nav-menu {
+    top: 50px; /* Adjust for smaller minimized header */
+  }
 }
 
 /* Correction pour les images des logos de recherche */
@@ -29,6 +88,162 @@
 .animate-on-scroll.animated {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Publication cards mobile stacking and centering */
+@media (max-width: 768px) {
+  .publications-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  .publication-card {
+    margin-bottom: 1rem;
+    max-width: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Center regular cards as well */
+  .grid {
+    justify-items: center;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Center contact grid */
+  .contact-grid {
+    justify-items: center;
+  }
+  
+  /* Center intern cards and other special cards */
+  .intern-card, .activity {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure section content is properly centered */
+  section .container {
+    text-align: center;
+  }
+  
+  section .container .card,
+  section .container .publication-card {
+    text-align: left;
+  }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-nav-dropdown {
+    display: none;
+  }
+
+  /* Mobile navigation icon overlay as alternative navigation */
+  .mobile-nav-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    z-index: 1001;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+  }
+
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-nav-overlay.active {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav-menu {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    min-width: 280px;
+    text-align: center;
+  }
+
+  .mobile-nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    margin: 10px 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav-menu a:hover {
+    background: var(--light-gray);
+    transform: translateX(5px);
+  }
+}
+
+/* Hide mobile nav icon on desktop */
+@media (min-width: 769px) {
+  .mobile-nav-icon {
+    display: none !important;
+  }
 }
 
 /* Amélioration de la responsivité pour les petits écrans */
@@ -56,5 +271,22 @@
   
   .contact-form button {
     width: 100%;
+  }
+
+  .mobile-nav-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  /* Additional centering for very small screens */
+  .container {
+    padding: 0 15px;
+    text-align: center;
+  }
+  
+  .publication-card, .card {
+    text-align: left;
+    margin: 0 auto 1rem auto;
   }
 }
