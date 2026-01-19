@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/Users/infectious/Pictures/**)",
+      "Read(/Users/infectious/Pictures/**)",
+      "Read(/Users/infectious/Pictures/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/css/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/js/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/css/**)",
+      "Read(/Users/infectious/Desktop/Thèse_DALLEST_2023_2026/portfolio/DLTBryan.github.io/css/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
