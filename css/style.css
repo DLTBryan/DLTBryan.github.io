@@ -985,6 +985,15 @@ footer {
   overflow: visible;
 }
 
+.internsSwiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.internsSwiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
 .intern-card {
   background: var(--white);
   border-radius: 1.5rem;
@@ -993,7 +1002,7 @@ footer {
   position: relative;
   transition: all 0.3s ease;
   border: 1px solid var(--light-gray);
-  height: auto;
+  width: 100%;
   min-height: 500px;
   display: flex;
   flex-direction: column;
